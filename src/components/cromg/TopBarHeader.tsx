@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logoCromg from "@/assets/logo-cromg.png.asset.json";
 import {
   Building2,
   FileSearch,
