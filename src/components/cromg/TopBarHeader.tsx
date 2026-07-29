@@ -193,7 +193,7 @@ export function OnThisPage() {
   return (
     <aside
       aria-label="Nesta página"
-      className="pointer-events-none fixed top-1/2 right-6 z-40 hidden -translate-y-1/2 xl:block"
+      className="pointer-events-none fixed top-1/2 right-6 z-40 hidden -translate-y-1/2 2xl:block"
     >
       <div className="pointer-events-auto rounded-2xl border border-line bg-background/90 p-4 shadow-[0_8px_30px_-24px_rgba(41,37,37,0.9)] backdrop-blur">
         <p className="mb-3 text-[10px] font-bold tracking-[0.18em] text-muted-foreground uppercase">
