@@ -145,17 +145,6 @@ type Material = {
 };
 
 const materiais: Material[] = [
-  { title: "Modelo de relatório de atividade", key: "relatorio", action: "Baixar" },
-  { title: "Modelo de registro de visita institucional", key: "visita", action: "Baixar" },
-  { title: "Modelo de ofício", key: "oficio", action: "Baixar" },
-  { title: "Modelo de solicitação de reunião", key: "reuniao", action: "Baixar" },
-  { title: "Checklist para eventos", key: "evento", action: "Baixar" },
-  { title: "Plano dos primeiros 90 dias", key: "plano90Dias", action: "Baixar" },
-  { title: "Ficha de mapeamento municipal", key: "mapeamento", action: "Baixar" },
-  { title: "Apresentação institucional do CRO-MG", key: "apresentacao", action: "Acessar" },
-  { title: "Assinatura institucional", key: "assinatura", state: "restrito" },
-  { title: "Manual de uso da marca", key: "marca", state: "restrito" },
-  { title: "Cartilha em PDF", key: "cartilha", action: "Baixar" },
   { title: "Código de Ética Odontológica", key: "codigoEtica", action: "Acessar" },
 ];
 
