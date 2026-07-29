@@ -50,19 +50,19 @@ export const Route = createFileRoute("/")({
         content:
           "Representante Municipal CRO-MG, Conselho Regional de Odontologia de Minas Gerais, Delegacias Regionais CRO-MG, Guia do Representante Municipal, Odontologia Minas Gerais",
       },
-      { property: "og:title", content: "Representante Municipal do CRO-MG" },
+      { property: "og:title", content: "Representante Municipal do CRO-MG | Guia de Atuação" },
       {
         property: "og:description",
         content:
-          "Um guia completo para orientar, aproximar e fortalecer a Odontologia nos municípios mineiros.",
+          "Guia digital do Representante Municipal do Conselho Regional de Odontologia de Minas Gerais.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Representante Municipal do CRO-MG" },
+      { name: "twitter:title", content: "Representante Municipal do CRO-MG | Guia de Atuação" },
       {
         name: "twitter:description",
         content:
-          "Um guia completo para orientar, aproximar e fortalecer a Odontologia nos municípios mineiros.",
+          "Guia digital do Representante Municipal do Conselho Regional de Odontologia de Minas Gerais.",
       },
     ],
   }),

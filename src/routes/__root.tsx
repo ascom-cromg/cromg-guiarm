@@ -84,15 +84,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Guia digital do Representante Municipal do Conselho Regional de Odontologia de Minas Gerais.",
       },
       { name: "author", content: "CRO-MG" },
-      { property: "og:title", content: "Representante Municipal do CRO-MG" },
+      { property: "og:title", content: "Representante Municipal do CRO-MG | Guia de Atuação" },
       {
         property: "og:description",
         content:
-          "Um guia completo para orientar, aproximar e fortalecer a Odontologia nos municípios mineiros.",
+          "Guia digital do Representante Municipal do Conselho Regional de Odontologia de Minas Gerais.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Representante Municipal do CRO-MG | Guia de Atuação" },
+      { name: "twitter:description", content: "Guia digital do Representante Municipal do Conselho Regional de Odontologia de Minas Gerais." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/70838fb8-74b1-43f2-9a9a-cb88b455cb5f/id-preview-14cd099b--9c1c7cea-8b1b-4e0d-ab6c-45b698f9e036.lovable.app-1785323845981.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/70838fb8-74b1-43f2-9a9a-cb88b455cb5f/id-preview-14cd099b--9c1c7cea-8b1b-4e0d-ab6c-45b698f9e036.lovable.app-1785323845981.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
