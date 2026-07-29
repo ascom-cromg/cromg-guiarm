@@ -1,24 +1,116 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Toaster } from "@/components/ui/sonner";
+import {
+  BackToTop,
+  InstitutionalBar,
+  MobileQuickBar,
+  OnThisPage,
+  ReadingProgress,
+  SiteHeader,
+} from "@/components/cromg/TopBarHeader";
+import {
+  Hero,
+  Nomeacao,
+  OPapel,
+  Pilares,
+  QuemFazOQue,
+  QuickAccess,
+  Welcome,
+} from "@/components/cromg/SectionsIntro";
+import { Atribuicoes, Fluxo, Limites, NaPratica } from "@/components/cromg/SectionsNormas";
+import {
+  Comunicacao,
+  Eventos,
+  FiscalizacaoColaborativa,
+  Mapeamento,
+  Plano90,
+  ProtecaoDados,
+  Relacionamento,
+  Rotina,
+} from "@/components/cromg/SectionsPratica";
+import {
+  CtaFinal,
+  Faq,
+  Ferramentas,
+  Materiais,
+  SiteFooter,
+} from "@/components/cromg/SectionsRecursos";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Representante Municipal do CRO-MG | Guia de Atuação";
+const description =
+  "Conheça as atribuições, os limites, os canais de apoio e as ferramentas do Representante Municipal do Conselho Regional de Odontologia de Minas Gerais.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      {
+        name: "keywords",
+        content:
+          "Representante Municipal CRO-MG, Conselho Regional de Odontologia de Minas Gerais, Delegacias Regionais CRO-MG, Guia do Representante Municipal, Odontologia Minas Gerais",
+      },
+      { property: "og:title", content: "Representante Municipal do CRO-MG" },
+      {
+        property: "og:description",
+        content:
+          "Um guia completo para orientar, aproximar e fortalecer a Odontologia nos municípios mineiros.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Representante Municipal do CRO-MG" },
+      {
+        name: "twitter:description",
+        content:
+          "Um guia completo para orientar, aproximar e fortalecer a Odontologia nos municípios mineiros.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background pb-14 md:pb-0">
+      <ReadingProgress />
+      <a
+        href="#conteudo"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[70] focus:rounded-lg focus:bg-wine focus:px-4 focus:py-2 focus:text-white"
+      >
+        Ir para o conteúdo
+      </a>
+      <InstitutionalBar />
+      <SiteHeader />
+      <OnThisPage />
+      <main id="conteudo">
+        <Hero />
+        <QuickAccess />
+        <Welcome />
+        <OPapel />
+        <Nomeacao />
+        <QuemFazOQue />
+        <Pilares />
+        <Atribuicoes />
+        <Limites />
+        <Fluxo />
+        <NaPratica />
+        <Plano90 />
+        <Mapeamento />
+        <Relacionamento />
+        <Comunicacao />
+        <FiscalizacaoColaborativa />
+        <ProtecaoDados />
+        <Eventos />
+        <Rotina />
+        <Ferramentas />
+        <Materiais />
+        <Faq />
+        <CtaFinal />
+      </main>
+      <SiteFooter />
+      <BackToTop />
+      <MobileQuickBar />
+      <Toaster position="bottom-center" />
     </div>
   );
 }

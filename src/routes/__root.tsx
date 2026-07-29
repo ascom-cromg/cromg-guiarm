@@ -77,16 +77,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Representante Municipal do CRO-MG | Guia de Atuação" },
+      {
+        name: "description",
+        content:
+          "Guia digital do Representante Municipal do Conselho Regional de Odontologia de Minas Gerais.",
+      },
+      { name: "author", content: "CRO-MG" },
+      { property: "og:title", content: "Representante Municipal do CRO-MG" },
+      {
+        property: "og:description",
+        content:
+          "Um guia completo para orientar, aproximar e fortalecer a Odontologia nos municípios mineiros.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,

@@ -1,0 +1,57 @@
+export const cromgConfig = {
+  updatedAt: "Julho/2026",
+  address: "Rua da Bahia, 1477 — Lourdes, Belo Horizonte — MG, CEP 30160-017",
+  whatsappLabel: "(31) 2104-3000",
+  whatsappUrl: "https://wa.me/553121043000",
+  phoneLabel: "0800 015 4000",
+  phoneUrl: "tel:08000154000",
+  controladoriaEmail: "mailto:controladoria@cromg.org.br",
+  links: {
+    site: "https://cromg.org.br/",
+    delegacias: "https://cromg.org.br/delegacias-regionais/",
+    profissionais: "https://cro.mg/profissionais",
+    servicos: "https://cro.mg/servicos",
+    denuncias: "https://cro.mg/denuncias",
+    fiscalizacao: "https://cro.mg/fiscalizacao",
+    etica: "https://cromg.org.br/etica/",
+    atualizacaoCadastral: "https://cromg.org.br/atualizacao-cadastral/",
+    pep: "https://cro.mg/pep",
+    app: "https://cromg.org.br/app-meu-cromg/",
+    transparencia: "https://transparencia.cromg.org.br/",
+    privacidade: "https://cromg.org.br/politica-de-privacidade/",
+    normasCfo: "https://website.cfo.org.br/normas-cfo-cros/",
+    atosCfo: "https://transparencia.cfo.org.br/atos-normativos/",
+    consolidacaoCfo:
+      "https://transparencia.cfo.org.br/wp-content/uploads/2023/09/Consolida%C3%A7%C3%A3o-das-Normas-Atualizado-emsetembro-de-2023.pdf",
+    acessibilidade: "https://cromg.org.br/",
+    instagram: "https://www.instagram.com/cromgoficial/",
+    facebook: "https://www.facebook.com/cromgoficial",
+    youtube: "https://www.youtube.com/@cromgoficial",
+  },
+  downloads: {
+    relatorio: "",
+    visita: "",
+    oficio: "",
+    reuniao: "",
+    evento: "",
+    plano90Dias: "",
+    mapeamento: "",
+    apresentacao: "",
+    assinatura: "",
+    marca: "",
+    cartilha: "",
+    codigoEtica: "https://cromg.org.br/etica/",
+  },
+} as const;
+
+export type DownloadKey = keyof typeof cromgConfig.downloads;
+
+export const navSections = [
+  { id: "inicio", label: "Início" },
+  { id: "o-papel", label: "O papel do representante" },
+  { id: "atribuicoes", label: "Atribuições" },
+  { id: "na-pratica", label: "Na prática" },
+  { id: "primeiros-90-dias", label: "Primeiros 90 dias" },
+  { id: "ferramentas", label: "Ferramentas" },
+  { id: "duvidas", label: "Dúvidas" },
+];
