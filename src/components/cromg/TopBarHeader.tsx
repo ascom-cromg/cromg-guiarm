@@ -7,7 +7,6 @@ import {
   Accessibility,
   Menu,
   MapPin,
-  Lock,
   Wrench,
   ShieldAlert,
   X,
@@ -113,17 +112,6 @@ export function SiteHeader() {
             <MapPin className="size-4" aria-hidden="true" />
             Minha Delegacia
           </a>
-          <span
-            title="Em desenvolvimento"
-            aria-disabled="true"
-            className="hidden min-h-11 cursor-not-allowed items-center gap-2 rounded-xl border border-line px-4 text-[13px] font-bold text-muted-foreground xl:inline-flex"
-          >
-            <Lock className="size-4" aria-hidden="true" />
-            Área do Representante
-            <span className="rounded-md bg-ice px-1.5 py-0.5 text-[10px] tracking-wide uppercase">
-              Acesso restrito
-            </span>
-          </span>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -160,9 +148,6 @@ export function SiteHeader() {
                 >
                   Minha Delegacia
                 </a>
-              </li>
-              <li className="px-3 py-2 text-xs text-muted-foreground">
-                Área do Representante — em desenvolvimento (acesso restrito).
               </li>
             </ul>
           </nav>
