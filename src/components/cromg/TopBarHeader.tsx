@@ -83,9 +83,7 @@ export function SiteHeader() {
           </span>
           <span className="leading-tight">
             <span className="block text-sm font-extrabold text-wine">CRO-MG</span>
-            <span className="block text-[11px] text-muted-foreground">
-              Representante Municipal
-            </span>
+            <span className="block text-[11px] text-muted-foreground">Representante Municipal</span>
           </span>
         </a>
 
@@ -208,16 +206,11 @@ export function OnThisPage() {
                 href={`#${s.id}`}
                 className={cn(
                   "flex items-center gap-2 rounded-md px-2 py-1.5 transition-colors",
-                  active === s.id
-                    ? "bg-wine/5 text-wine"
-                    : "text-muted-foreground hover:text-wine",
+                  active === s.id ? "bg-wine/5 text-wine" : "text-muted-foreground hover:text-wine",
                 )}
               >
                 <span
-                  className={cn(
-                    "h-1.5 w-1.5 rotate-45",
-                    active === s.id ? "bg-gold" : "bg-line",
-                  )}
+                  className={cn("h-1.5 w-1.5 rotate-45", active === s.id ? "bg-gold" : "bg-line")}
                   aria-hidden="true"
                 />
                 {s.label}

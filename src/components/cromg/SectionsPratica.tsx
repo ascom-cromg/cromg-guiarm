@@ -146,9 +146,7 @@ export function Plano90() {
                       <input
                         type="checkbox"
                         checked={checked}
-                        onChange={(e) =>
-                          setDone((prev) => ({ ...prev, [key]: e.target.checked }))
-                        }
+                        onChange={(e) => setDone((prev) => ({ ...prev, [key]: e.target.checked }))}
                         className="mt-1 size-4 shrink-0 accent-[oklch(0.263_0.098_27.5)]"
                       />
                       <span className={checked ? "text-muted-foreground line-through" : ""}>
@@ -232,9 +230,7 @@ export function Mapeamento() {
   const [ficha, setFicha] = useState<Record<string, string>>({});
 
   const copyFicha = useCallback(async () => {
-    const text = fichaCampos
-      .map((c) => `${c.label}: ${ficha[c.id] ?? ""}`)
-      .join("\n");
+    const text = fichaCampos.map((c) => `${c.label}: ${ficha[c.id] ?? ""}`).join("\n");
     try {
       await navigator.clipboard.writeText(text);
       toast("Ficha copiada para a área de transferência.");
@@ -345,11 +341,7 @@ export function Relacionamento() {
           <p className="mt-3 rounded-xl border border-gold/60 bg-gold/10 p-4 text-sm leading-[1.7] text-foreground/85 italic">
             “{apresentacaoModelo}”
           </p>
-          <CopyButton
-            text={apresentacaoModelo}
-            label="Copiar apresentação"
-            className="mt-4"
-          />
+          <CopyButton text={apresentacaoModelo} label="Copiar apresentação" className="mt-4" />
         </Panel>
         <Panel>
           <h3 className="text-base font-extrabold text-wine">3. Conduza a reunião</h3>

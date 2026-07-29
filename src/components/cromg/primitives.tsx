@@ -191,10 +191,7 @@ export function BulletList({
     <ul className={cn("mt-4 space-y-2.5 text-sm leading-[1.7]", className)}>
       {items.map((item) => (
         <li key={item} className="flex gap-3">
-          <span
-            className="mt-2 size-1.5 shrink-0 rotate-45 bg-gold"
-            aria-hidden="true"
-          />
+          <span className="mt-2 size-1.5 shrink-0 rotate-45 bg-gold" aria-hidden="true" />
           <span className={invert ? "text-white/85" : "text-foreground/85"}>{item}</span>
         </li>
       ))}

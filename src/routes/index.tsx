@@ -17,12 +17,7 @@ import {
   QuickAccess,
   Welcome,
 } from "@/components/cromg/SectionsIntro";
-import {
-  Atribuicoes,
-  Fluxo,
-  Limites,
-  NaPratica,
-} from "@/components/cromg/SectionsNormas";
+import { Atribuicoes, Fluxo, Limites, NaPratica } from "@/components/cromg/SectionsNormas";
 import {
   Comunicacao,
   Eventos,
