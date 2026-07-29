@@ -75,14 +75,14 @@ export function SiteHeader() {
         )}
       >
         <a href="#inicio" className="flex items-center gap-3">
-          <span
-            className="grid size-10 shrink-0 place-items-center rounded-lg bg-wine text-sm font-black text-white"
-            aria-hidden="true"
-          >
-            CRO
-          </span>
+          <img
+            src={logoCromg.url}
+            alt="Logotipo oficial do CRO-MG"
+            className="h-8 w-auto shrink-0 md:h-9"
+            width={192}
+            height={58}
+          />
           <span className="leading-tight">
-            <span className="block text-sm font-extrabold text-wine">CRO-MG</span>
             <span className="block text-[11px] text-muted-foreground">Representante Municipal</span>
           </span>
         </a>
