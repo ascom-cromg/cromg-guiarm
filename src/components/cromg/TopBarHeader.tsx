@@ -7,7 +7,6 @@ import {
   Accessibility,
   Menu,
   MapPin,
-  Lock,
   Wrench,
   ShieldAlert,
   X,
@@ -149,9 +148,6 @@ export function SiteHeader() {
                 >
                   Minha Delegacia
                 </a>
-              </li>
-              <li className="px-3 py-2 text-xs text-muted-foreground">
-                Área do Representante — em desenvolvimento (acesso restrito).
               </li>
             </ul>
           </nav>
