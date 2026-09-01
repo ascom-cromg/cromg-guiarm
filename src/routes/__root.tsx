@@ -4,12 +4,9 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect } from "react";
 
-import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -73,64 +70,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Representante Municipal do CRO-MG | Guia de Atuação" },
-      {
-        name: "description",
-        content:
-          "Guia digital do Representante Municipal do Conselho Regional de Odontologia de Minas Gerais.",
-      },
-      { name: "author", content: "CRO-MG" },
-      { property: "og:title", content: "Representante Municipal do CRO-MG | Guia de Atuação" },
-      {
-        property: "og:description",
-        content:
-          "Guia digital do Representante Municipal do Conselho Regional de Odontologia de Minas Gerais.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Representante Municipal do CRO-MG | Guia de Atuação" },
-      { name: "twitter:description", content: "Guia digital do Representante Municipal do Conselho Regional de Odontologia de Minas Gerais." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/70838fb8-74b1-43f2-9a9a-cb88b455cb5f/id-preview-14cd099b--9c1c7cea-8b1b-4e0d-ab6c-45b698f9e036.lovable.app-1785323845981.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/70838fb8-74b1-43f2-9a9a-cb88b455cb5f/id-preview-14cd099b--9c1c7cea-8b1b-4e0d-ab6c-45b698f9e036.lovable.app-1785323845981.png" },
-    ],
-    links: [
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap",
-      },
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();

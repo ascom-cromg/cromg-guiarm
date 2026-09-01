@@ -41,31 +41,6 @@ const description =
   "Conheça as atribuições, os limites, os canais de apoio e as ferramentas do Representante Municipal do Conselho Regional de Odontologia de Minas Gerais.";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      {
-        name: "keywords",
-        content:
-          "Representante Municipal CRO-MG, Conselho Regional de Odontologia de Minas Gerais, Delegacias Regionais CRO-MG, Guia do Representante Municipal, Odontologia Minas Gerais",
-      },
-      { property: "og:title", content: "Representante Municipal do CRO-MG | Guia de Atuação" },
-      {
-        property: "og:description",
-        content:
-          "Guia digital do Representante Municipal do Conselho Regional de Odontologia de Minas Gerais.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Representante Municipal do CRO-MG | Guia de Atuação" },
-      {
-        name: "twitter:description",
-        content:
-          "Guia digital do Representante Municipal do Conselho Regional de Odontologia de Minas Gerais.",
-      },
-    ],
-  }),
   component: Index,
 });
 
