@@ -1,0 +1,25 @@
+services:
+  app:
+    image: ${IMAGE:-ghcr.io/OWNER/REPO:latest}
+    networks:
+      - traefik-public
+    deploy:
+      mode: replicated
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+      update_config:
+        parallelism: 1
+        order: start-first
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=traefik-public"
+        - "traefik.http.routers.${STACK_NAME}.rule=Host(`${DOMAIN}`)"
+        - "traefik.http.routers.${STACK_NAME}.entrypoints=websecure"
+        - "traefik.http.routers.${STACK_NAME}.tls=true"
+        - "traefik.http.routers.${STACK_NAME}.tls.certresolver=meuresolver"
+        - "traefik.http.services.${STACK_NAME}.loadbalancer.server.port=80"
+
+networks:
+  traefik-public:
+    external: true
